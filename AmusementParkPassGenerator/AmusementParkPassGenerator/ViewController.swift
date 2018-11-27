@@ -149,7 +149,6 @@ class ViewController: UIViewController {
         let firstNameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         firstNameLabel.textAlignment = .left
         firstNameLabel.text = "First Name"
-        firstNameLabel.backgroundColor = .blue
         firstNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return firstNameLabel
@@ -159,18 +158,55 @@ class ViewController: UIViewController {
         let lastNameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         lastNameLabel.textAlignment = .left
         lastNameLabel.text = "Last Name"
-        lastNameLabel.backgroundColor = .red
         lastNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return lastNameLabel
     }()
     
+    lazy var streetAddressLabel: UILabel = {
+        let streetAddressLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        streetAddressLabel.textAlignment = .left
+        streetAddressLabel.text = "Street Address"
+        streetAddressLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return streetAddressLabel
+    }()
+    
+    lazy var cityLabel: UILabel = {
+        let cityLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        cityLabel.textAlignment = .left
+        cityLabel.text = "City"
+        cityLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return cityLabel
+    }()
+    
+    lazy var zipcodeLabel: UILabel = {
+        let zipcodeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        zipcodeLabel.textAlignment = .left
+        zipcodeLabel.text = "Zip"
+        zipcodeLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return zipcodeLabel
+    }()
+    
+    lazy var stateLabel: UILabel = {
+        let stateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        stateLabel.textAlignment = .left
+        stateLabel.text = "State"
+        stateLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stateLabel
+    }()
+    
+    
+    //TextFields for UI
     lazy var firstNameTextField: UITextField = {
         let firstNameTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        firstNameTextField.textColor = .black
+        firstNameTextField.textColor = .white
         firstNameTextField.placeholder = "Enter your text here"
         firstNameTextField.borderStyle = .roundedRect
-        firstNameTextField.backgroundColor = .blue
+        firstNameTextField.backgroundColor = .gray
         firstNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return firstNameTextField
@@ -178,13 +214,57 @@ class ViewController: UIViewController {
     
     lazy var lastNameTextField: UITextField = {
         let lastNameTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        lastNameTextField.textColor = .black
+        lastNameTextField.textColor = .white
         lastNameTextField.placeholder = "Enter your text here"
         lastNameTextField.borderStyle = .roundedRect
-        lastNameTextField.backgroundColor = .red
+        lastNameTextField.backgroundColor = .gray
         lastNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return lastNameTextField
+    }()
+    
+    lazy var streetAddressTextField: UITextField = {
+        let streetAddressTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
+        streetAddressTextField.textColor = .white
+        streetAddressTextField.placeholder = "Enter your text here"
+        streetAddressTextField.borderStyle = .roundedRect
+        streetAddressTextField.backgroundColor = .gray
+        streetAddressTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return streetAddressTextField
+    }()
+    
+    lazy var cityTextField: UITextField = {
+        let cityTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
+        cityTextField.textColor = .white
+        cityTextField.placeholder = "Enter your text here"
+        cityTextField.borderStyle = .roundedRect
+        cityTextField.backgroundColor = .gray
+        cityTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return cityTextField
+    }()
+    
+    lazy var stateTextField: UITextField = {
+        let stateTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
+        stateTextField.textColor = .white
+        stateTextField.placeholder = "Enter your text here"
+        stateTextField.borderStyle = .roundedRect
+        stateTextField.backgroundColor = .gray
+        stateTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stateTextField
+    }()
+    
+    lazy var zipcodeTextField: UITextField = {
+        let zipcodeTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
+        zipcodeTextField.textColor = .white
+        zipcodeTextField.placeholder = "Enter your text here"
+        zipcodeTextField.borderStyle = .roundedRect
+        zipcodeTextField.backgroundColor = .gray
+        zipcodeTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return zipcodeTextField
     }()
     
     override func viewDidLoad() {
@@ -250,6 +330,65 @@ class ViewController: UIViewController {
             lastNameTextField.topAnchor.constraint(equalTo: lastNameLabel.bottomAnchor, constant: 10.0),
             lastNameTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20.0),
             lastNameTextField.leftAnchor.constraint(equalTo: lastNameLabel.leftAnchor, constant: 0.0)
+            ])
+        
+        view.addSubview(streetAddressLabel)
+        
+        NSLayoutConstraint.activate([
+            streetAddressLabel.leftAnchor.constraint(equalTo: firstNameLabel.leftAnchor, constant: 0.0),
+            streetAddressLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 0.0)
+            ])
+        
+        view.addSubview(streetAddressTextField)
+        
+        NSLayoutConstraint.activate([
+            streetAddressTextField.leftAnchor.constraint(equalTo: streetAddressLabel.leftAnchor, constant: 0.0),
+            streetAddressTextField.topAnchor.constraint(equalTo: streetAddressLabel.bottomAnchor, constant: 10.0),
+            streetAddressTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -20.0)
+            ])
+        
+        view.addSubview(cityLabel)
+        
+        NSLayoutConstraint.activate([
+            cityLabel.leftAnchor.constraint(equalTo: streetAddressTextField.leftAnchor, constant: 0.0),
+            cityLabel.topAnchor.constraint(equalTo: streetAddressTextField.bottomAnchor, constant: 100.0)
+            ])
+        
+        view.addSubview(stateLabel)
+        
+        NSLayoutConstraint.activate([
+            stateLabel.leftAnchor.constraint(equalTo: cityLabel.rightAnchor, constant: 200.0),
+            stateLabel.topAnchor.constraint(equalTo: streetAddressTextField.bottomAnchor, constant: 100.0)
+            ])
+        
+        view.addSubview(zipcodeLabel)
+        
+        NSLayoutConstraint.activate([
+            zipcodeLabel.leftAnchor.constraint(equalTo: stateLabel.rightAnchor, constant: 200.0),
+            zipcodeLabel.topAnchor.constraint(equalTo: streetAddressTextField.bottomAnchor, constant: 100.0)
+            ])
+        
+        view.addSubview(cityTextField)
+        
+        NSLayoutConstraint.activate([
+            cityTextField.leftAnchor.constraint(equalTo: cityLabel.leftAnchor, constant: 0.0),
+            cityTextField.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 10.0)
+            ])
+        
+        view.addSubview(stateTextField)
+        
+        NSLayoutConstraint.activate([
+            stateTextField.leftAnchor.constraint(equalTo: stateLabel.leftAnchor, constant: 0.0),
+            stateTextField.topAnchor.constraint(equalTo: stateLabel.bottomAnchor, constant: 10.0)
+            
+            ])
+        
+        view.addSubview(zipcodeTextField)
+        
+        NSLayoutConstraint.activate([
+            zipcodeTextField.leftAnchor.constraint(equalTo: zipcodeLabel.leftAnchor, constant: 0.0),
+            zipcodeTextField.topAnchor.constraint(equalTo: zipcodeLabel.bottomAnchor, constant: 10.0)
+            
             ])
         
     }
