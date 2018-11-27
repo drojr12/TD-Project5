@@ -241,8 +241,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             firstNameTextField.topAnchor.constraint(equalTo: firstNameLabel.bottomAnchor, constant: 10.0),
             firstNameTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 0.0),
-            firstNameTextField.leftAnchor.constraint(equalTo: firstNameLabel.leftAnchor, constant: 0.0),
-            firstNameTextField.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -535.0)
+            firstNameTextField.leftAnchor.constraint(equalTo: firstNameLabel.leftAnchor, constant: 0.0)
             ])
         
         view.addSubview(lastNameTextField)
