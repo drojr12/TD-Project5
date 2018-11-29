@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         guestButton.backgroundColor = .purple
         guestButton.translatesAutoresizingMaskIntoConstraints = false
         guestButton.addTarget(self, action: #selector( self.guestButtonClicked(sender:) ), for: .touchUpInside)
+        
         return guestButton
     }()
     
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
         employeeButton.backgroundColor = .purple
         employeeButton.translatesAutoresizingMaskIntoConstraints = false
         employeeButton.addTarget(self, action: #selector( self.employeeButtonClicked(sender:) ), for: .touchUpInside)
+        
         return employeeButton
     }()
     
@@ -35,9 +37,10 @@ class ViewController: UIViewController {
         let managerButton = UIButton(type: .system)
         managerButton.setTitle("Manager", for: .normal)
         managerButton.setTitleColor(.white, for: .normal)
-        managerButton.backgroundColor = .purple
+        managerButton.backgroundColor = .black
         managerButton.translatesAutoresizingMaskIntoConstraints = false
         managerButton.addTarget(self, action: #selector( self.managerButtonClicked(sender:) ), for: .touchUpInside)
+        
         return managerButton
     }()
     
@@ -45,9 +48,10 @@ class ViewController: UIViewController {
         let contractorButton = UIButton(type: .system)
         contractorButton.setTitle("Contractor", for: .normal)
         contractorButton.setTitleColor(.white, for: .normal)
-        contractorButton.backgroundColor = .purple
+        contractorButton.backgroundColor = .black
         contractorButton.translatesAutoresizingMaskIntoConstraints = false
         contractorButton.addTarget(self, action: #selector( self.contractorButtonClicked(sender:) ), for: .touchUpInside)
+        
         return contractorButton
     }()
     
@@ -58,6 +62,7 @@ class ViewController: UIViewController {
         vendorButton.backgroundColor = .purple
         vendorButton.translatesAutoresizingMaskIntoConstraints = false
         vendorButton.addTarget(self, action: #selector( self.vendorButtonClicked(sender:) ), for: .touchUpInside)
+        
         return vendorButton
     }()
     
@@ -66,8 +71,10 @@ class ViewController: UIViewController {
         let childButton = UIButton(type: .system)
         childButton.setTitle("Child", for: .normal)
         childButton.setTitleColor(.white, for: .normal)
-        childButton.backgroundColor = .gray
+        childButton.backgroundColor = .black
         childButton.translatesAutoresizingMaskIntoConstraints = false
+        childButton.addTarget(self, action: #selector( self.childButtonClicked(sender:) ), for: .touchUpInside)
+        
         return childButton
     }()
     
@@ -75,8 +82,10 @@ class ViewController: UIViewController {
         let classicButton = UIButton(type: .system)
         classicButton.setTitle("Classic", for: .normal)
         classicButton.setTitleColor(.white, for: .normal)
-        classicButton.backgroundColor = .gray
+        classicButton.backgroundColor = .black
         classicButton.translatesAutoresizingMaskIntoConstraints = false
+        classicButton.addTarget(self, action: #selector( self.classicButtonClicked(sender:) ), for: .touchUpInside)
+        
         return classicButton
     }()
     
@@ -84,8 +93,10 @@ class ViewController: UIViewController {
         let seniorButton = UIButton(type: .system)
         seniorButton.setTitle("Senior", for: .normal)
         seniorButton.setTitleColor(.white, for: .normal)
-        seniorButton.backgroundColor = .gray
+        seniorButton.backgroundColor = .black
         seniorButton.translatesAutoresizingMaskIntoConstraints = false
+        seniorButton.addTarget(self, action: #selector( self.seniorButtonClicked(sender:) ), for: .touchUpInside)
+        
         return seniorButton
     }()
     
@@ -93,8 +104,9 @@ class ViewController: UIViewController {
         let vipButton = UIButton(type: .system)
         vipButton.setTitle("VIP", for: .normal)
         vipButton.setTitleColor(.white, for: .normal)
-        vipButton.backgroundColor = .gray
+        vipButton.backgroundColor = .black
         vipButton.translatesAutoresizingMaskIntoConstraints = false
+        vipButton.addTarget(self, action: #selector( self.vipButtonClicked(sender:) ), for: .touchUpInside)
         return vipButton
     }()
     
@@ -102,8 +114,10 @@ class ViewController: UIViewController {
         let seasonPassButton = UIButton(type: .system)
         seasonPassButton.setTitle("Season Pass", for: .normal)
         seasonPassButton.setTitleColor(.white, for: .normal)
-        seasonPassButton.backgroundColor = .gray
+        seasonPassButton.backgroundColor = .black
         seasonPassButton.translatesAutoresizingMaskIntoConstraints = false
+        seasonPassButton.addTarget(self, action: #selector( self.seasonPassButtonClicked(sender:) ), for: .touchUpInside)
+        
         return seasonPassButton
     }()
     
@@ -111,8 +125,10 @@ class ViewController: UIViewController {
         let foodServicesButton = UIButton(type: .system)
         foodServicesButton.setTitle("Food Services", for: .normal)
         foodServicesButton.setTitleColor(.white, for: .normal)
-        foodServicesButton.backgroundColor = .gray
+        foodServicesButton.backgroundColor = .black
         foodServicesButton.translatesAutoresizingMaskIntoConstraints = false
+        foodServicesButton.addTarget(self, action: #selector( self.foodServicesButtonClicked(sender:) ), for: .touchUpInside)
+        
         return foodServicesButton
     }()
     
@@ -120,8 +136,10 @@ class ViewController: UIViewController {
         let rideServicesButton = UIButton(type: .system)
         rideServicesButton.setTitle("Ride Services", for: .normal)
         rideServicesButton.setTitleColor(.white, for: .normal)
-        rideServicesButton.backgroundColor = .gray
+        rideServicesButton.backgroundColor = .black
         rideServicesButton.translatesAutoresizingMaskIntoConstraints = false
+        rideServicesButton.addTarget(self, action: #selector( self.rideServicesButtonClicked(sender:) ), for: .touchUpInside)
+        
         return rideServicesButton
     }()
     
@@ -129,8 +147,10 @@ class ViewController: UIViewController {
         let maintenanceButton = UIButton(type: .system)
         maintenanceButton.setTitle("Maintenance", for: .normal)
         maintenanceButton.setTitleColor(.white, for: .normal)
-        maintenanceButton.backgroundColor = .gray
+        maintenanceButton.backgroundColor = .black
         maintenanceButton.translatesAutoresizingMaskIntoConstraints = false
+        maintenanceButton.addTarget(self, action: #selector( self.maintenanceButtonClicked(sender:) ), for: .touchUpInside)
+        
         return maintenanceButton
     }()
     
@@ -138,10 +158,43 @@ class ViewController: UIViewController {
         let emptyButtonForStackView = UIButton(type: .system)
         emptyButtonForStackView.setTitle(nil, for: .normal)
         emptyButtonForStackView.setTitleColor(.white, for: .normal)
-        emptyButtonForStackView.backgroundColor = .gray
+        emptyButtonForStackView.backgroundColor = .black
         emptyButtonForStackView.translatesAutoresizingMaskIntoConstraints = false
         
         return emptyButtonForStackView
+    }()
+    
+    lazy var generatePassButton: UIButton = {
+        let generatePassButton = UIButton(type: .system)
+        generatePassButton.setTitle("Generate Pass", for: .normal)
+        generatePassButton.setTitleColor(.white, for: .normal)
+        generatePassButton.backgroundColor = .purple
+        generatePassButton.layer.cornerRadius = 5.0
+        generatePassButton.layer.borderColor = UIColor.black.cgColor
+        generatePassButton.layer.borderWidth = 1.0
+        generatePassButton.translatesAutoresizingMaskIntoConstraints = false
+        generatePassButton.addTarget(self, action: #selector( self.generatePassButtonClicked(sender:) ), for: .touchUpInside)
+        
+        return generatePassButton
+    }()
+    
+    lazy var populateDataButton: UIButton = {
+        let populateDataButton = UIButton(type: .system)
+        populateDataButton.setTitle("Populate Data", for: .normal)
+        populateDataButton.setTitleColor(.white, for: .normal)
+        populateDataButton.backgroundColor = .purple
+        populateDataButton.layer.cornerRadius = 5.0
+        populateDataButton.layer.borderColor = UIColor.black.cgColor
+        populateDataButton.layer.borderWidth = 1.0
+        populateDataButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        return populateDataButton
+    }()
+    
+    lazy var currentButtonSelected: UIButton = {
+        let currentButtonSelected = UIButton(type: .system)
+        
+        return currentButtonSelected
     }()
     
     //Labels for UI
@@ -199,14 +252,23 @@ class ViewController: UIViewController {
         return stateLabel
     }()
     
+    lazy var dateOfBirthLabel: UILabel = {
+        let dateOfBirthLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        dateOfBirthLabel.textAlignment = .left
+        dateOfBirthLabel.text = "Date of Birth"
+        dateOfBirthLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return dateOfBirthLabel
+    }()
+    
     
     //TextFields for UI
     lazy var firstNameTextField: UITextField = {
         let firstNameTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        firstNameTextField.textColor = .white
+        firstNameTextField.textColor = .black
         firstNameTextField.placeholder = "Enter your text here"
         firstNameTextField.borderStyle = .roundedRect
-        firstNameTextField.backgroundColor = .gray
+        firstNameTextField.backgroundColor = .white
         firstNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return firstNameTextField
@@ -214,10 +276,10 @@ class ViewController: UIViewController {
     
     lazy var lastNameTextField: UITextField = {
         let lastNameTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        lastNameTextField.textColor = .white
+        lastNameTextField.textColor = .black
         lastNameTextField.placeholder = "Enter your text here"
         lastNameTextField.borderStyle = .roundedRect
-        lastNameTextField.backgroundColor = .gray
+        lastNameTextField.backgroundColor = .white
         lastNameTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return lastNameTextField
@@ -225,10 +287,10 @@ class ViewController: UIViewController {
     
     lazy var streetAddressTextField: UITextField = {
         let streetAddressTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        streetAddressTextField.textColor = .white
+        streetAddressTextField.textColor = .black
         streetAddressTextField.placeholder = "Enter your text here"
         streetAddressTextField.borderStyle = .roundedRect
-        streetAddressTextField.backgroundColor = .gray
+        streetAddressTextField.backgroundColor = .white
         streetAddressTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return streetAddressTextField
@@ -236,10 +298,10 @@ class ViewController: UIViewController {
     
     lazy var cityTextField: UITextField = {
         let cityTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        cityTextField.textColor = .white
+        cityTextField.textColor = .black
         cityTextField.placeholder = "Enter your text here"
         cityTextField.borderStyle = .roundedRect
-        cityTextField.backgroundColor = .gray
+        cityTextField.backgroundColor = .white
         cityTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return cityTextField
@@ -247,10 +309,10 @@ class ViewController: UIViewController {
     
     lazy var stateTextField: UITextField = {
         let stateTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        stateTextField.textColor = .white
+        stateTextField.textColor = .black
         stateTextField.placeholder = "Enter your text here"
         stateTextField.borderStyle = .roundedRect
-        stateTextField.backgroundColor = .gray
+        stateTextField.backgroundColor = .white
         stateTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return stateTextField
@@ -258,18 +320,30 @@ class ViewController: UIViewController {
     
     lazy var zipcodeTextField: UITextField = {
         let zipcodeTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
-        zipcodeTextField.textColor = .white
+        zipcodeTextField.textColor = .black
         zipcodeTextField.placeholder = "Enter your text here"
         zipcodeTextField.borderStyle = .roundedRect
-        zipcodeTextField.backgroundColor = .gray
+        zipcodeTextField.backgroundColor = .white
         zipcodeTextField.translatesAutoresizingMaskIntoConstraints = false
         
         return zipcodeTextField
     }()
     
+    lazy var dateOfBirthTextField: UITextField = {
+        let dateOfBirthTextField = UITextField(frame: CGRect(x: 20, y: 100, width: 100, height: 300))
+        dateOfBirthTextField.textColor = .black
+        dateOfBirthTextField.placeholder = "Enter your text here"
+        dateOfBirthTextField.borderStyle = .roundedRect
+        dateOfBirthTextField.backgroundColor = .white
+        dateOfBirthTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return dateOfBirthTextField
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Comment which method you want to run!
+        view.backgroundColor = .lightGray
         
         //setupGuestEntrants()
         setupEmployeeEntrants()
@@ -286,7 +360,7 @@ class ViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        let topStackView = UIStackView(arrangedSubviews: [guestButton, employeeButton, managerButton, contractorButton, vendorButton])
+        let topStackView = UIStackView(arrangedSubviews: [guestButton, employeeButton, vendorButton])
         topStackView.translatesAutoresizingMaskIntoConstraints = false
         topStackView.axis = .horizontal
         topStackView.alignment = .fill
@@ -391,10 +465,48 @@ class ViewController: UIViewController {
             
             ])
         
+        view.addSubview(generatePassButton)
+        
+        NSLayoutConstraint.activate([
+            generatePassButton.leftAnchor.constraint(equalTo: cityLabel.leftAnchor, constant: 0.0),
+            generatePassButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50.0),
+            generatePassButton.rightAnchor.constraint(equalTo: cityTextField.rightAnchor, constant: 0.0),
+            generatePassButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100.0)
+            
+            ])
+        
+        view.addSubview(populateDataButton)
+        
+        NSLayoutConstraint.activate([
+            populateDataButton.leftAnchor.constraint(equalTo: zipcodeTextField.leftAnchor, constant: 0.0),
+            populateDataButton.bottomAnchor.constraint(equalTo: generatePassButton.bottomAnchor, constant: 0.0),
+            populateDataButton.rightAnchor.constraint(equalTo: zipcodeTextField.rightAnchor, constant: 0.0),
+            populateDataButton.topAnchor.constraint(equalTo: generatePassButton.topAnchor, constant: 0.0)
+            
+            ])
+        
+        view.addSubview(dateOfBirthLabel)
+
+        NSLayoutConstraint.activate([
+            dateOfBirthLabel.leftAnchor.constraint(equalTo: firstNameTextField.leftAnchor, constant: 0.0),
+            dateOfBirthLabel.topAnchor.constraint(equalTo: firstNameTextField.bottomAnchor, constant: 100.0)
+            ])
+        
+        view.addSubview(dateOfBirthTextField)
+        
+        NSLayoutConstraint.activate([
+            dateOfBirthTextField.leftAnchor.constraint(equalTo: dateOfBirthLabel.leftAnchor, constant: 0.0),
+            dateOfBirthTextField.topAnchor.constraint(equalTo: dateOfBirthLabel.bottomAnchor, constant: 10.0),
+            dateOfBirthTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 0.0)
+            
+            ])
+        
     }
     
     @objc func guestButtonClicked(sender: UIButton) {
         //Do Button Clicked Code here
+        
+        currentButtonSelected = guestButton
         
         let bottomStackView = UIStackView(arrangedSubviews: [childButton, classicButton, seniorButton, vipButton, seasonPassButton])
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -417,7 +529,9 @@ class ViewController: UIViewController {
     @objc func employeeButtonClicked(sender: UIButton) {
         //Do Button Clicked Code here
         
-        let bottomStackView = UIStackView(arrangedSubviews: [foodServicesButton, rideServicesButton, maintenanceButton])
+        currentButtonSelected = employeeButton
+        
+        let bottomStackView = UIStackView(arrangedSubviews: [foodServicesButton, rideServicesButton, maintenanceButton, managerButton, contractorButton])
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomStackView.axis = .horizontal
         bottomStackView.alignment = .fill
@@ -438,46 +552,63 @@ class ViewController: UIViewController {
     @objc func managerButtonClicked(sender: UIButton) {
         //Do Button Clicked Code here
         
-        let bottomStackView = UIStackView(arrangedSubviews: [emptyButtonForStackView])
-        bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        bottomStackView.axis = .horizontal
-        bottomStackView.alignment = .fill
-        bottomStackView.distribution = .fillEqually
-        bottomStackView.spacing = 0.0
+        currentButtonSelected = managerButton
         
-        view.addSubview(bottomStackView)
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
         
-        NSLayoutConstraint.activate([
-            bottomStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50.0),
-            bottomStackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0.0),
-            bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100.0),
-            bottomStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0.0),
-            ])
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+        
     }
     
     @objc func contractorButtonClicked(sender: UIButton) {
         //Do Button Clicked Code here
+        currentButtonSelected = contractorButton
         
-        let bottomStackView = UIStackView(arrangedSubviews: [emptyButtonForStackView])
-        bottomStackView.translatesAutoresizingMaskIntoConstraints = false
-        bottomStackView.axis = .horizontal
-        bottomStackView.alignment = .fill
-        bottomStackView.distribution = .fillEqually
-        bottomStackView.spacing = 0.0
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
         
-        view.addSubview(bottomStackView)
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
         
-        NSLayoutConstraint.activate([
-            bottomStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50.0),
-            bottomStackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0.0),
-            bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100.0),
-            bottomStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0.0),
-            ])
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+        
     }
     
     @objc func vendorButtonClicked(sender: UIButton) {
         //Do Button Clicked Code here
         
+        currentButtonSelected = vendorButton
+        
         let bottomStackView = UIStackView(arrangedSubviews: [emptyButtonForStackView])
         bottomStackView.translatesAutoresizingMaskIntoConstraints = false
         bottomStackView.axis = .horizontal
@@ -493,6 +624,269 @@ class ViewController: UIViewController {
             bottomStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100.0),
             bottomStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0.0),
             ])
+        
+    }
+    
+    @objc func childButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = childButton
+        
+        firstNameTextField.isEnabled = false
+        firstNameTextField.backgroundColor = .darkGray
+        
+        lastNameTextField.isEnabled = false
+        lastNameTextField.backgroundColor = .darkGray
+        
+        streetAddressTextField.isEnabled = false
+        streetAddressTextField.backgroundColor = .darkGray
+        
+        cityTextField.isEnabled = false
+        cityTextField.backgroundColor = .darkGray
+        
+        stateTextField.isEnabled = false
+        stateTextField.backgroundColor = .darkGray
+        
+        zipcodeTextField.isEnabled = false
+        zipcodeTextField.backgroundColor = .darkGray
+        
+        dateOfBirthTextField.isEnabled = true
+        dateOfBirthTextField.backgroundColor = .white
+        
+    }
+    
+    @objc func classicButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = classicButton
+        
+        firstNameTextField.isEnabled = false
+        firstNameTextField.backgroundColor = .darkGray
+        
+        lastNameTextField.isEnabled = false
+        lastNameTextField.backgroundColor = .darkGray
+        
+        streetAddressTextField.isEnabled = false
+        streetAddressTextField.backgroundColor = .darkGray
+        
+        cityTextField.isEnabled = false
+        cityTextField.backgroundColor = .darkGray
+        
+        stateTextField.isEnabled = false
+        stateTextField.backgroundColor = .darkGray
+        
+        zipcodeTextField.isEnabled = false
+        zipcodeTextField.backgroundColor = .darkGray
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+    }
+    
+    @objc func seniorButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = seniorButton
+        
+        streetAddressTextField.isEnabled = false
+        streetAddressTextField.backgroundColor = .darkGray
+        
+        cityTextField.isEnabled = false
+        cityTextField.backgroundColor = .darkGray
+        
+        stateTextField.isEnabled = false
+        stateTextField.backgroundColor = .darkGray
+        
+        zipcodeTextField.isEnabled = false
+        zipcodeTextField.backgroundColor = .darkGray
+        
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        dateOfBirthTextField.isEnabled = true
+        dateOfBirthTextField.backgroundColor = .white
+    }
+    
+    @objc func vipButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = vipButton
+        
+        firstNameTextField.isEnabled = false
+        firstNameTextField.backgroundColor = .darkGray
+        
+        lastNameTextField.isEnabled = false
+        lastNameTextField.backgroundColor = .darkGray
+        
+        streetAddressTextField.isEnabled = false
+        streetAddressTextField.backgroundColor = .darkGray
+        
+        cityTextField.isEnabled = false
+        cityTextField.backgroundColor = .darkGray
+        
+        stateTextField.isEnabled = false
+        stateTextField.backgroundColor = .darkGray
+        
+        zipcodeTextField.isEnabled = false
+        zipcodeTextField.backgroundColor = .darkGray
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+    }
+    
+    @objc func seasonPassButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = seasonPassButton
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+    }
+    
+    @objc func foodServicesButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = foodServicesButton
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+        
+    }
+    
+    @objc func rideServicesButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = rideServicesButton
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+        
+    }
+    
+    @objc func maintenanceButtonClicked(sender: UIButton) {
+        
+        currentButtonSelected = maintenanceButton
+        
+        dateOfBirthTextField.isEnabled = false
+        dateOfBirthTextField.backgroundColor = .darkGray
+        
+        firstNameTextField.isEnabled = true
+        firstNameTextField.backgroundColor = .white
+        
+        lastNameTextField.isEnabled = true
+        lastNameTextField.backgroundColor = .white
+        
+        streetAddressTextField.isEnabled = true
+        streetAddressTextField.backgroundColor = .white
+        
+        cityTextField.isEnabled = true
+        cityTextField.backgroundColor = .white
+        
+        stateTextField.isEnabled = true
+        stateTextField.backgroundColor = .white
+        
+        zipcodeTextField.isEnabled = true
+        zipcodeTextField.backgroundColor = .white
+        
+    }
+    
+    @objc func generatePassButtonClicked(sender: UIButton) {
+        
+        switch(currentButtonSelected.currentTitle) {
+        case "Senior":
+            print("You have the Senior button selected")
+            //Do textField checking for when the Senior button is selected, and the Generate Pass button is pressed.
+            
+        case "Child":
+            print("You have the Child button selected")
+            
+        case "Classic":
+            print("You have the Classic button selected")
+            
+        case "VIP":
+            print("You have the VIP button selected")
+            
+        case "Season Pass":
+            print("You have the Season Pass button selected")
+            
+        case "Food Services":
+            print("You have the Food Services button selected")
+            
+        case "Ride Services":
+            print("You have the Ride Services button selected")
+            
+        case "Maintenance":
+            print("You have the Maintenance button selected")
+            
+        case "Manager":
+            print("You have the Manager button selected")
+            
+        case "Contractor":
+            print("You have the Contractor button selected")
+            
+        case "Guest":
+            print("You have the Guest button selected")
+            
+        case "Employee":
+            print("You have the Employee button selected")
+            
+        case "Vendor":
+            print("You have the Vendor button selected")
+            
+        default:
+            print("There is no button selected!")
+        }
         
     }
     
